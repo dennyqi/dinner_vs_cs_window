@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="603.531" Width="1010.246">
+    <Grid>
+        <CheckBox x:Name="leon_zhang" Content="Leon Zhang" HorizontalAlignment="Left" Height="16" Margin="560,110,0,0" VerticalAlignment="Top" Width="69" Checked="leon_zhang_checked" Unchecked="leon_zhang_unchecked"/>
+        <CheckBox x:Name="dennyqi" Content="Denny Qi" HorizontalAlignment="Left" Margin="560,145,0,0" VerticalAlignment="Top" Width="87" Unchecked="dennyqi_unchecked" Checked="dennyqi_checked"/>
+        <CheckBox x:Name="yirun" Content="Yirun Wang" HorizontalAlignment="Left" Margin="560,184,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dinner Order Form" HorizontalAlignment="Left" Height="28" Margin="303,37,0,0" VerticalAlignment="Top" Width="143"/>
+        <Label x:Name="today_date" Content="Today Date" HorizontalAlignment="Left" Height="26" Margin="560,37,0,0" VerticalAlignment="Top" Width="154"/>
+        <Label x:Name="total_orders" Content="Total Orders: 0" HorizontalAlignment="Left" Height="71" Margin="560,252,0,0" VerticalAlignment="Top" Width="160"/>
+        <Button Content="Count" HorizontalAlignment="Left" Height="30" Margin="314,241,0,0" VerticalAlignment="Top" Width="122" Click="count_orders"/>
+        <Image x:Name="actiontec" Source="C:\download\tftpd32\bird.png" HorizontalAlignment="Left" Height="76" Margin="24,26,0,0" VerticalAlignment="Top" Width="91" Initialized="myimage" RenderTransformOrigin="0.376,-0.247"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="314,301,0,0" VerticalAlignment="Top" Width="122" Click="myexit" Height="30"/>
+        <ComboBox x:Name="mycombox" HorizontalAlignment="Left" Height="33" Margin="82,128,0,0" VerticalAlignment="Top" Width="172" DataContextChanged="newdish" FocusableChanged="focuschanged" GotFocus="gotfocus" SelectionChanged="selectchanged">
+            <ComboBoxItem Content="Fish" HorizontalAlignment="Left" Width="170"/>
+            <ComboBoxItem Content="Shrimp" HorizontalAlignment="Left" Width="170" Height="17"/>
+            <ComboBoxItem Content="Chicken" HorizontalAlignment="Left" Width="170"/>
+            <ComboBoxItem Content="Pork" HorizontalAlignment="Left" Width="170"/>
+            <ComboBoxItem Content="Vege" HorizontalAlignment="Left" Width="170"/>
+        </ComboBox>
+        <Label Content="Please select your dinner:" HorizontalAlignment="Left" Margin="82,92,0,0" VerticalAlignment="Top" Width="172"/>
+        <Button Content="ScreenShot" HorizontalAlignment="Left" Margin="478,301,0,0" VerticalAlignment="Top" Width="75" Click="screenshot"/>
+        <Image x:Name="mydish" Source="C:\download\tftpd32\fish.jpg" HorizontalAlignment="Left" Height="100" Margin="314,121,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="menu" Content="Menu" HorizontalAlignment="Left" Margin="313,356,0,0" VerticalAlignment="Top" Width="122" Height="30" Click="fretch_menu"/>
+        <ListBox x:Name="mylist" HorizontalAlignment="Left" Height="100" Margin="82,271,0,0" VerticalAlignment="Top" Width="161" SelectionChanged="mylist_SelectionChanged"/>
+        <Button Content="Order" HorizontalAlignment="Left" Margin="520,356,0,0" VerticalAlignment="Top" Width="75" Click="myorder"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="720,161,0,0" VerticalAlignment="Top" Width="69"/>
+        <WebBrowser x:Name="mybrowser" HorizontalAlignment="Left" Height="129" Margin="788,92,0,0" VerticalAlignment="Top" Width="204" Initialized="mybrower_init"/>
+        <Button Content="Rebuild DB" HorizontalAlignment="Left" Margin="329,428,0,0" VerticalAlignment="Top" Width="75" Click="mydb"/>
+        <ProgressBar x:Name="myprogressbar" HorizontalAlignment="Left" Height="5" Margin="446,445,0,0" VerticalAlignment="Top" Width="193"/>
+        <Button Content="Thread" HorizontalAlignment="Left" Margin="115,413,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <RadioButton x:Name="myradio0" Content="Jing Wei" HorizontalAlignment="Left" Height="26" Margin="666,110,0,0" VerticalAlignment="Top" Width="69"/>
+        <RadioButton x:Name="myradio1" Content="Victor M" HorizontalAlignment="Left" Margin="666,145,0,0" VerticalAlignment="Top" Height="26" Width="69"/>
+        <RadioButton x:Name="myradio2" Content="Xing Fang" HorizontalAlignment="Left" Margin="666,184,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="26"/>
+        <StatusBar x:Name="mystatusbar" HorizontalAlignment="Left" Height="28" Margin="775,37,0,0" VerticalAlignment="Top" Width="148"/>
+        <Menu x:Name="mymenu" HorizontalAlignment="Left" Height="30" Margin="710,241,0,0" VerticalAlignment="Top" Width="241">
+            <MenuItem Header="Order Dinner" Height="30" Width="100">
+                <MenuItem Header="Who order" HorizontalAlignment="Left" Height="31" Width="187" Margin="0,0,-42,0"/>
+                <MenuItem Header="How many orders" HorizontalAlignment="Left" Height="31" Width="187" Margin="1,0,-43,0"/>
+            </MenuItem>
+            <MenuItem Header="Rebuild DB" Height="30" Width="100"/>
+        </Menu>
+        <PasswordBox x:Name="mypasswd" HorizontalAlignment="Left" Margin="96,472,0,0" VerticalAlignment="Top" Width="158"/>
+        <TextBox x:Name="myusername" HorizontalAlignment="Left" Height="22" Margin="96,445,0,0" TextWrapping="Wrap" Text="Please enter username" VerticalAlignment="Top" Width="147"/>
+
+    </Grid>
+</Window>
