@@ -43,6 +43,8 @@ namespace WpfApp2
             //String filePath = @"C:\dqi\tftpd32\fish.jpg";
             //mydish.Source = new Uri(@"C:\dqi\tftpd32\fish.jpg", UriKind.Relative);
             today_date.Content = date.ToString();
+
+            //change something from Sunnyvale
             //mycombox.SelectedIndex = 0;
             //Uri uri = new Uri(@"C:\dqi\tftpd32\fish.jpg", UriKind.Relative);
             //objImage.Source = new BitmapImage(new Uri("http://domain/images/myOwnImage.jpg", UriKind.Absolute));
