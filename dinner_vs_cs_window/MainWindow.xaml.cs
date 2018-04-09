@@ -23,6 +23,7 @@ using System.Net;
 //using System.Security.Permissions;
 using System.Threading;
 using System.Diagnostics;
+using MySql.Data.MySqlClient;
 
 
 namespace WpfApp2
